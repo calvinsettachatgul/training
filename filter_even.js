@@ -1,5 +1,6 @@
 // write a function that will take an array of numbers as input and remove all odd elements
 // satisfy the following input outputs as listed below
+// make the false results true
 
 let filter_even = (arr) => {
     
