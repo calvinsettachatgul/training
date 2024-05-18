@@ -10,7 +10,6 @@ let filter_even = (arr) => {
         }
     });
     
-    console.log({result});
     return result;
 }
 
