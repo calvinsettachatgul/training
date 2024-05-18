@@ -20,7 +20,7 @@ input3 =  [3, 3 , 1]
 output3 =  []
 
 
-console.log(filter_even(input1) === output1);
-console.log(filter_even(input2) === output2);
-console.log(filter_even(input3) === output3);
+console.log(JSON.stringify(filter_even(input1)) == JSON.stringify(output1));
+console.log(JSON.stringify(filter_even(input2)) == JSON.stringify(output2));
+console.log(JSON.stringify(filter_even(input3)) == JSON.stringify(output3));
 
