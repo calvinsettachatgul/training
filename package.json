@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:calvinsettachatgul/training.git",
   "author": "Calvin Settachatgul <calvin.settachatgul@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
   "engines": {
     "node": "21"
    }
