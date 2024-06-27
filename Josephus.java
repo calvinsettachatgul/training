@@ -16,21 +16,57 @@ the function outputs the winning position.*/
 
 
 import java.util.Scanner;
+import java.util.ArrayList; 
+import java.util.List;
+
+/*
+
+1 2 3 4 5 6 7 8 9 10
+1   3   5   7   9
+       5       9
+        5    
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1   3   5   7   9    11    13    15    17    19
+1       5       9          13          17
+1               9          13          
+                9
+*/ 
 
 
 public class Josephus {
     public static void main(String[] args) {
         int n;
-        System.out.println("How many people in the circle?\n");
-        Scanner keyboard = new Scanner(System.in);
-        n = keyboard.nextInt();
-        System.out.println("Choose Position: " + josephus(n));
+        // System.out.println("How many people in the circle?\n");
+        // Scanner keyboard = new Scanner(System.in);
+        // n = keyboard.nextInt();
+        // System.out.println("Choose Position: " + josephus(n));
+        System.out.println(josephus(1) == 1);
+        System.out.println(josephus(2) == 1);
+        System.out.println(josephus(3) == 3);
+        System.out.println(josephus(4) == 1);
+        System.out.println(josephus(10) == 5);
+        System.out.println(josephus(100) == 73);
+        System.out.println(josephus(20) == 9);
     }
     static double josephus(int n) {
-
-
-
-
-        return -1;
+        List<Integer> circle = new ArrayList<>();
+        // create a circle
+        for (int i = 1; i <=n ; i++){
+            circle.add(i);
+        }
+        while(circle.size() > 1){
+            //eliminate members in line
+            for(int i = 0; i< circle.size(); i++){
+                    if(i == (circle.size() - 1)){
+                       circle.remove(0); 
+                    }else{
+                       circle.remove(i+1);
+                    }
+            }
+        }
+               return circle.get(0);
     }
+    
+
 }
