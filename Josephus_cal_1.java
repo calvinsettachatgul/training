@@ -50,6 +50,22 @@ public class Josephus {
         System.out.println(josephus(20) == 9);
     }
     static double josephus(int n) {
+        List<Integer> circle = new ArrayList<>();
+        // create a circle
+        for (int i = 1; i <=n ; i++){
+            circle.add(i);
+        }
+        while(circle.size() > 1){
+            //eliminate members in line
+            for(int i = 0; i< circle.size(); i++){
+                    if(i == (circle.size() - 1)){
+                       circle.remove(0); 
+                    }else{
+                       circle.remove(i+1);
+                    }
+            }
+        }
+               return circle.get(0);
     }
     
 
